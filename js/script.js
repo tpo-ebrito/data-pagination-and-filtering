@@ -37,7 +37,7 @@ function showPage(list, page){
          let studentItem = 
          `<li class="student-item cf">
          <div class="student-details">
-           <img class="avatar" src="https://randomuser.me/api/portraits/women/25.jpg" alt="Profile Picture">
+           <img class="avatar" src="${student.picture.large}" alt="Profile Picture">
            <h3>${student.name.title}. ${student.name.first} ${student.name.last}</h3>
            <span class="email">${student.email}</span>
          </div>
@@ -47,8 +47,6 @@ function showPage(list, page){
        </li>`;
 
        studentList.insertAdjacentHTML("beforeend", studentItem);
-
-      console.log(studentItem);
     } 
    }
 };
