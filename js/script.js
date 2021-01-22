@@ -28,13 +28,14 @@ function showPage(list, page){
    let studentList = document.querySelector('ul.student-list');
    studentList.innerHTML = '';
 
-   console.log(startIndex);
-   console.log(endIndex);
+   // console.log(startIndex);
+   // console.log(endIndex);
 
    for(let i = 0; i < list.length; i++){
-       console.log(list[i]);
-    }
-
+      if(i >= startIndex && i < endIndex){
+         console.log(list[i].name);
+    } 
+   }
 };
 
 /*
