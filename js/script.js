@@ -11,7 +11,43 @@ For assistance:
    Reach out in your Slack community: https://treehouse-fsjs-102.slack.com/app_redirect?channel=unit-2
 */
 
+//Search form 
 
+function inputFilter() {
+const header = document.querySelector('header.header');
+const h2 = header.firstElementChild;
+
+let studentDisplay = `<label for="search" class="student-search">
+   <input id="search" placeholder="Search by name...">
+   <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+ </label>`;
+
+ h2.insertAdjacentHTML("afterend", studentDisplay);
+const input = document.getElementById('search');
+
+
+
+for(i = 0; i < data.length; i++){
+  
+   const student = data[i];
+   
+   
+}
+
+}
+
+
+
+
+/*
+<li class="student-item cf">
+      <label for="search" class="student-search">
+            <input id="search" placeholder="Search by name...">
+            <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+          </label>
+        
+        </li>
+*/
 
 /*
 Create the `showPage` function
@@ -86,7 +122,6 @@ function addPagination(list){
    });
 
 };
-
 
 // Call functions
 showPage(data, 1);
