@@ -11,74 +11,6 @@ For assistance:
    Reach out in your Slack community: https://treehouse-fsjs-102.slack.com/app_redirect?channel=unit-2
 */
 
-//Search form 
-
-
-
-// function searchBar() {
-//    const header = document.querySelector('header');
-
-//    const searchDisplay = 
-//    `<label for="search" class="student-search">
-//       <input id="search" placeholder="Search by name...">
-//       <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-//     </label>`;
-
-//    header.insertAdjacentHTML('beforeend', searchDisplay);
-//    const input = document.getElementById("search");
-
-//    const button = input.nextElementSibling;
-//    const img = button.firstElementChild;
-
-//    let filteredStudents = [];
-
-// /* Test Code:
-//     console.log(header);
-//     console.log(search);
-//     console.log(searchDisplay);
-//     console.log("Did it work?");
-//     console.log(button);
-//     console.log(img);
-//     console.log(img.alt);
-//     console.log(input);
-// */
-
-//    button.addEventListener('click', (e)=>{
-//       if(img.alt === 'Search icon'){
-         
-//       /* Test Code:
-//          console.log("Oh Yeah?");
-//          console.log(data[0].name.first.toLowerCase());
-//          console.log(input.value);
-//       */
-
-//       for(i = 0; i< data.length; i++){
-//          const fullName = data[i].name.first + ' ' + data[i].name.last;
-//      //  console.log(fullName);
-//          const include = fullName.toLowerCase().includes(input.value.toLowerCase());
-
-//          if(include && include !== " "){
-//          // console.log(data[i]);
-//             filteredStudents.push(data[i]);
-//             input.value = '';
-//             console.log(filteredStudents[i]);
-//             showPage(filteredStudents, 1);
-//             console.log('Should be working');
-//            // console.log(filteredStudents[i]);
-//          } else if(!include){
-//             console.log('Not working');
-//             showPage(data, 1);
-//          }
-//          }
-//          showPage(filteredStudents, 1);
-//          filteredStudents = [];
-         
-//    }
-//    });
-
-// }
-
-
 /*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
@@ -174,5 +106,5 @@ function addPagination(list){
 // Call functions
 showPage(data, 1);
 addPagination(data);
-//searchBar();
+
 
