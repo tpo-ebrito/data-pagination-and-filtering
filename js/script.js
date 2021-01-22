@@ -13,63 +13,71 @@ For assistance:
 
 //Search form 
 
-/*
 
-function searchBar() {
-   const header = document.querySelector('header');
 
- //  console.log(header);
+// function searchBar() {
+//    const header = document.querySelector('header');
 
-   const searchDisplay = 
-   `<label for="search" class="student-search">
-      <input id="search" placeholder="Search by name...">
-      <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-    </label>`;
+//    const searchDisplay = 
+//    `<label for="search" class="student-search">
+//       <input id="search" placeholder="Search by name...">
+//       <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+//     </label>`;
 
-   console.log(searchDisplay);
+//    header.insertAdjacentHTML('beforeend', searchDisplay);
+//    const input = document.getElementById("search");
 
-   const search = header.insertAdjacentHTML('beforeend', searchDisplay);
+//    const button = input.nextElementSibling;
+//    const img = button.firstElementChild;
 
-  // console.log(search);
- //  console.log("Did it work?");
+//    let filteredStudents = [];
 
-   const input = document.getElementById("search");
+// /* Test Code:
+//     console.log(header);
+//     console.log(search);
+//     console.log(searchDisplay);
+//     console.log("Did it work?");
+//     console.log(button);
+//     console.log(img);
+//     console.log(img.alt);
+//     console.log(input);
+// */
 
-   console.log(input);
-
-   const button = input.nextElementSibling;
-   
-   // console.log(button);
-
-   const img = button.firstElementChild;
-
-   // console.log(img);
-
-   // console.log(img.alt);
-
-   const filteredStudents = [];
-
-   button.addEventListener('click', (e)=>{
-      if(img.alt === 'Search icon'){
-         console.log("Oh Yeah?");
-         // console.log(data[0].name.first.toLowerCase());
-         // console.log(input.value);
+//    button.addEventListener('click', (e)=>{
+//       if(img.alt === 'Search icon'){
          
-      for(i = 0; i< data.length; i++){
-         if(data[i].name.first.toLowerCase() === input.value.toLowerCase()){
-            console.log(data[i]);
-            filteredStudents[i] = data[i];
-         }else if(input.value === ''){
-            showPage(data, 1);
-         }
-         }
-         console.log(filteredStudents[0]);
-         showPage(filteredStudents, 1);
-   }
-   });
+//       /* Test Code:
+//          console.log("Oh Yeah?");
+//          console.log(data[0].name.first.toLowerCase());
+//          console.log(input.value);
+//       */
 
-}
-*/
+//       for(i = 0; i< data.length; i++){
+//          const fullName = data[i].name.first + ' ' + data[i].name.last;
+//      //  console.log(fullName);
+//          const include = fullName.toLowerCase().includes(input.value.toLowerCase());
+
+//          if(include && include !== " "){
+//          // console.log(data[i]);
+//             filteredStudents.push(data[i]);
+//             input.value = '';
+//             console.log(filteredStudents[i]);
+//             showPage(filteredStudents, 1);
+//             console.log('Should be working');
+//            // console.log(filteredStudents[i]);
+//          } else if(!include){
+//             console.log('Not working');
+//             showPage(data, 1);
+//          }
+//          }
+//          showPage(filteredStudents, 1);
+//          filteredStudents = [];
+         
+//    }
+//    });
+
+// }
+
 
 /*
 Create the `showPage` function
@@ -155,7 +163,6 @@ function addPagination(list){
       if(e.target.tagName === 'BUTTON'){
          const activeClass = document.querySelector('.active');
          activeClass.className = '';
-         
          e.target.className = 'active';
          showPage(list, e.target.textContent);  //calls showPage in order to determine the 9 students that will be on the selected page
       }
@@ -167,5 +174,5 @@ function addPagination(list){
 // Call functions
 showPage(data, 1);
 addPagination(data);
-// searchBar();
+//searchBar();
 
