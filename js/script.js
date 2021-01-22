@@ -47,7 +47,16 @@ function searchBar() {
 
    button.addEventListener('click', (e)=>{
       if(img.alt === 'Search icon'){
-      console.log("Oh Yeah?");
+         console.log("Oh Yeah?");
+         console.log(data[0].name.first.toLowerCase());
+         console.log(input.value);
+
+         if(data[0].name.first.toLowerCase() === input.value.toLowerCase()){
+            console.log("Now we're getting somewhere");
+         }else{
+            console.log("Something went wrong");
+         }
+      
       } else {
       console.log("This isn't working homie.");
       }
