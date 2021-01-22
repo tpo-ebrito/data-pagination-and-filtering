@@ -13,6 +13,8 @@ For assistance:
 
 //Search form 
 
+/*
+
 function searchBar() {
    const header = document.querySelector('header');
 
@@ -67,6 +69,7 @@ function searchBar() {
    });
 
 }
+*/
 
 /*
 Create the `showPage` function
