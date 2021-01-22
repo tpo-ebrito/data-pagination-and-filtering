@@ -25,7 +25,7 @@ const studentsPerPage = 9;
 function showPage(list, page){
    const startIndex = (page*studentsPerPage) - studentsPerPage;
    const endIndex = (page * studentsPerPage);
-   let studentList = document.querySelector('ul.student-list');
+   const studentList = document.querySelector('ul.student-list');
    studentList.innerHTML = '';
 
    // console.log(startIndex);
@@ -33,7 +33,22 @@ function showPage(list, page){
 
    for(let i = 0; i < list.length; i++){
       if(i >= startIndex && i < endIndex){
-         console.log(list[i].name);
+         const student = list[i];
+         let studentItem = 
+         `<li class="student-item cf">
+         <div class="student-details">
+           <img class="avatar" src="https://randomuser.me/api/portraits/women/25.jpg" alt="Profile Picture">
+           <h3>${student.name.title}. ${student.name.first} ${student.name.last}</h3>
+           <span class="email">${student.email}</span>
+         </div>
+         <div class="joined-details">
+           <span class="date">Joined: ${student.registered.date}</span>
+         </div>
+       </li>`;
+
+       studentList.insertAdjacentHTML("beforeend", studentItem);
+
+      console.log(studentItem);
     } 
    }
 };
