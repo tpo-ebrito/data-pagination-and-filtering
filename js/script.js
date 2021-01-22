@@ -17,14 +17,11 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
+const itemsPerPage = 9;
 
-let random = [1,2,3,4,5,6];
-
-const studentsPerPage = 9;
-
-function showPage(list, page){
-   const startIndex = (page*studentsPerPage) - studentsPerPage;
-   const endIndex = (page * studentsPerPage);
+function showPage(list, page){   
+   const startIndex = (page*itemsPerPage) - itemsPerPage;
+   const endIndex = (page * itemsPerPage);
    const studentList = document.querySelector('ul.student-list');
    studentList.innerHTML = '';
 
@@ -45,7 +42,6 @@ function showPage(list, page){
            <span class="date">Joined: ${student.registered.date}</span>
          </div>
        </li>`;
-
        studentList.insertAdjacentHTML("beforeend", studentItem);
     } 
    }
@@ -56,9 +52,42 @@ Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
 
-function addPagination(){
+function addPagination(list){
+   const numOfPages = Math.ceil(list.length/itemsPerPage);
+
+//   console.log(numOfPages);
+
+   const linkList = document.querySelector('ul.link-list');
+   linkList.innerHTML='';
+
+   for(let i = 1; i < numOfPages+1; i++){
+      let button = 
+      `<li>
+      <button type="button">${i}</button>
+      </li>`;
+
+   linkList.insertAdjacentHTML("beforeend",button);
+
+ //     console.log(i);
+   }
+      
+   let button = document.querySelector('button');
+      button.className = 'active';
+
+   linkList.addEventListener('click', (e) => {
+      if(e.target.tagName === 'BUTTON'){
+         const activeClass = document.querySelector('.active');
+         activeClass.className = '';
+         
+         e.target.className = 'active';
+         showPage(list, e.target.textContent);
+      }
+      
+   });
 
 };
 
 
 // Call functions
+showPage(data, 1);
+addPagination(data);
