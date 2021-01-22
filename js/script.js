@@ -13,26 +13,45 @@ For assistance:
 
 //Search form 
 
-function inputFilter() {
-const header = document.querySelector('header.header');
-const h2 = header.firstElementChild;
+function searchBar() {
+   const header = document.querySelector('header');
 
-let studentDisplay = `<label for="search" class="student-search">
-   <input id="search" placeholder="Search by name...">
-   <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
- </label>`;
+ //  console.log(header);
 
- h2.insertAdjacentHTML("afterend", studentDisplay);
-const input = document.getElementById('search');
+   const searchDisplay = 
+   `<label for="search" class="student-search">
+      <input id="search" placeholder="Search by name...">
+      <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+    </label>`;
 
+   console.log(searchDisplay);
 
+   const search = header.insertAdjacentHTML('beforeend', searchDisplay);
 
-for(i = 0; i < data.length; i++){
-  
-   const student = data[i];
+  // console.log(search);
+ //  console.log("Did it work?");
+
+   const input = document.getElementById("search");
+
+   console.log(input);
+
+   const button = input.nextElementSibling;
    
-   
-}
+   // console.log(button);
+
+   const img = button.firstElementChild;
+
+   // console.log(img);
+
+   // console.log(img.alt);
+
+   button.addEventListener('click', (e)=>{
+      if(img.alt === 'Search icon'){
+      console.log("Oh Yeah?");
+      } else {
+      console.log("This isn't working homie.");
+      }
+   });
 
 }
 
@@ -126,3 +145,5 @@ function addPagination(list){
 // Call functions
 showPage(data, 1);
 addPagination(data);
+searchBar();
+
