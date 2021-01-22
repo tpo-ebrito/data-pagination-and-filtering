@@ -18,13 +18,33 @@ Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
 
+let random = [1,2,3,4,5,6];
 
+const studentsPerPage = 9;
+
+function showPage(list, page){
+   const startIndex = (page*studentsPerPage) - studentsPerPage;
+   const endIndex = (page * studentsPerPage);
+   let studentList = document.querySelector('ul.student-list');
+   studentList.innerHTML = '';
+
+   console.log(startIndex);
+   console.log(endIndex);
+
+   for(let i = 0; i < list.length; i++){
+       console.log(list[i]);
+    }
+
+};
 
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
 
+function addPagination(){
+
+};
 
 
 // Call functions
